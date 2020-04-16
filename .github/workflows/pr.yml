@@ -3,14 +3,6 @@ name: .NET Core
 on:
   pull_request:
     branches: [ master ]
-    paths:
-    - '!docfx.json'
-    - '!index.md'
-    - '!README.md'
-    - '!LICENSE'
-    - '!toc.yml'
-    - '!api/**'
-    - '!docs/**'
 
 jobs:
   build:
