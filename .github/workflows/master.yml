@@ -21,6 +21,6 @@ jobs:
     - name: Pack
       run: dotnet pack
     - name: Push Package
-      run: dotnet nuget push artifacts\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
+      run: dotnet nuget push artifacts/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
     - name: Push Symbols Package
-      run: dotnet nuget push artifacts\*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
+      run: dotnet nuget push artifacts/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
