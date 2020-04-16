@@ -1,0 +1,26 @@
+name: .NET Core 
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Pack
+      run: dotnet pack
+    - name: Push Package
+      run: dotnet nuget push artifacts\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
+    - name: Push Symbols Package
+      run: dotnet nuget push artifacts\*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
