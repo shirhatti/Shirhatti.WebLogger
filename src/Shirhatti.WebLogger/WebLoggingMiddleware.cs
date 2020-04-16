@@ -14,6 +14,10 @@ namespace Microsoft.AspNetCore.Builder
         private HttpContext _context;
         private volatile bool _isCancelled;
 
+        public WebLoggingMiddleware(RequestDelegate _)
+        {
+
+        }
         public async Task Invoke(HttpContext context, WebLoggerProcessor processor)
         {
             _isCancelled = false;
