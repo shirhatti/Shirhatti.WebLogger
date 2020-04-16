@@ -58,3 +58,7 @@ dotnet add package Shirhatti.WebLogger --version 0.0.2
 ```
 
 4. Change desired log level settings in `appSettings.Development.json`
+
+5. Run your application- `dotnet run`
+
+6. Navigate to `https://localhost:5001/debug/logs` to view your streaming logs
