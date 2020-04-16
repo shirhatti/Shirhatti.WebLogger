@@ -1,0 +1,174 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Microsoft.AspNetCore.Builder
+  name: Microsoft.AspNetCore.Builder
+  href: api/Microsoft.AspNetCore.Builder.html
+  commentId: N:Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+- uid: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions
+  name: IEndpointRouteBuilderExtensions
+  href: api/Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.html
+  commentId: T:Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions
+  fullName: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions
+  nameWithType: IEndpointRouteBuilderExtensions
+- uid: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String)
+  name: MapLogs(IEndpointRouteBuilder, String)
+  href: api/Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.html#Microsoft_AspNetCore_Builder_IEndpointRouteBuilderExtensions_MapLogs_Microsoft_AspNetCore_Routing_IEndpointRouteBuilder_System_String_
+  commentId: M:Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder,System.String)
+  fullName: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder, System.String)
+  nameWithType: IEndpointRouteBuilderExtensions.MapLogs(IEndpointRouteBuilder, String)
+- uid: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs*
+  name: MapLogs
+  href: api/Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.html#Microsoft_AspNetCore_Builder_IEndpointRouteBuilderExtensions_MapLogs_
+  commentId: Overload:Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs
+  isSpec: "True"
+  fullName: Microsoft.AspNetCore.Builder.IEndpointRouteBuilderExtensions.MapLogs
+  nameWithType: IEndpointRouteBuilderExtensions.MapLogs
+- uid: Microsoft.Extensions.Logging
+  name: Microsoft.Extensions.Logging
+  href: api/Microsoft.Extensions.Logging.html
+  commentId: N:Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+- uid: Microsoft.Extensions.Logging.ILoggingBuilderExtensions
+  name: ILoggingBuilderExtensions
+  href: api/Microsoft.Extensions.Logging.ILoggingBuilderExtensions.html
+  commentId: T:Microsoft.Extensions.Logging.ILoggingBuilderExtensions
+  fullName: Microsoft.Extensions.Logging.ILoggingBuilderExtensions
+  nameWithType: ILoggingBuilderExtensions
+- uid: Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger(Microsoft.Extensions.Logging.ILoggingBuilder)
+  name: AddWebLogger(ILoggingBuilder)
+  href: api/Microsoft.Extensions.Logging.ILoggingBuilderExtensions.html#Microsoft_Extensions_Logging_ILoggingBuilderExtensions_AddWebLogger_Microsoft_Extensions_Logging_ILoggingBuilder_
+  commentId: M:Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger(Microsoft.Extensions.Logging.ILoggingBuilder)
+  fullName: Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger(Microsoft.Extensions.Logging.ILoggingBuilder)
+  nameWithType: ILoggingBuilderExtensions.AddWebLogger(ILoggingBuilder)
+- uid: Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger*
+  name: AddWebLogger
+  href: api/Microsoft.Extensions.Logging.ILoggingBuilderExtensions.html#Microsoft_Extensions_Logging_ILoggingBuilderExtensions_AddWebLogger_
+  commentId: Overload:Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger
+  isSpec: "True"
+  fullName: Microsoft.Extensions.Logging.ILoggingBuilderExtensions.AddWebLogger
+  nameWithType: ILoggingBuilderExtensions.AddWebLogger
+- uid: Shirhatti.WebLogger
+  name: Shirhatti.WebLogger
+  href: api/Shirhatti.WebLogger.html
+  commentId: N:Shirhatti.WebLogger
+  fullName: Shirhatti.WebLogger
+  nameWithType: Shirhatti.WebLogger
+- uid: Shirhatti.WebLogger.WebLogger
+  name: WebLogger
+  href: api/Shirhatti.WebLogger.WebLogger.html
+  commentId: T:Shirhatti.WebLogger.WebLogger
+  fullName: Shirhatti.WebLogger.WebLogger
+  nameWithType: WebLogger
+- uid: Shirhatti.WebLogger.WebLogger.#ctor(System.String,System.Func{System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean},Microsoft.Extensions.Logging.IExternalScopeProvider)
+  name: WebLogger(String, Func<String, LogLevel, Boolean>, IExternalScopeProvider)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger__ctor_System_String_System_Func_System_String_Microsoft_Extensions_Logging_LogLevel_System_Boolean__Microsoft_Extensions_Logging_IExternalScopeProvider_
+  commentId: M:Shirhatti.WebLogger.WebLogger.#ctor(System.String,System.Func{System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean},Microsoft.Extensions.Logging.IExternalScopeProvider)
+  name.vb: WebLogger(String, Func(Of String, LogLevel, Boolean), IExternalScopeProvider)
+  fullName: Shirhatti.WebLogger.WebLogger.WebLogger(System.String, System.Func<System.String, Microsoft.Extensions.Logging.LogLevel, System.Boolean>, Microsoft.Extensions.Logging.IExternalScopeProvider)
+  fullName.vb: Shirhatti.WebLogger.WebLogger.WebLogger(System.String, System.Func(Of System.String, Microsoft.Extensions.Logging.LogLevel, System.Boolean), Microsoft.Extensions.Logging.IExternalScopeProvider)
+  nameWithType: WebLogger.WebLogger(String, Func<String, LogLevel, Boolean>, IExternalScopeProvider)
+  nameWithType.vb: WebLogger.WebLogger(String, Func(Of String, LogLevel, Boolean), IExternalScopeProvider)
+- uid: Shirhatti.WebLogger.WebLogger.#ctor(System.String,System.Func{System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean},System.Boolean)
+  name: WebLogger(String, Func<String, LogLevel, Boolean>, Boolean)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger__ctor_System_String_System_Func_System_String_Microsoft_Extensions_Logging_LogLevel_System_Boolean__System_Boolean_
+  commentId: M:Shirhatti.WebLogger.WebLogger.#ctor(System.String,System.Func{System.String,Microsoft.Extensions.Logging.LogLevel,System.Boolean},System.Boolean)
+  name.vb: WebLogger(String, Func(Of String, LogLevel, Boolean), Boolean)
+  fullName: Shirhatti.WebLogger.WebLogger.WebLogger(System.String, System.Func<System.String, Microsoft.Extensions.Logging.LogLevel, System.Boolean>, System.Boolean)
+  fullName.vb: Shirhatti.WebLogger.WebLogger.WebLogger(System.String, System.Func(Of System.String, Microsoft.Extensions.Logging.LogLevel, System.Boolean), System.Boolean)
+  nameWithType: WebLogger.WebLogger(String, Func<String, LogLevel, Boolean>, Boolean)
+  nameWithType.vb: WebLogger.WebLogger(String, Func(Of String, LogLevel, Boolean), Boolean)
+- uid: Shirhatti.WebLogger.WebLogger.#ctor*
+  name: WebLogger
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger__ctor_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.#ctor
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.WebLogger
+  nameWithType: WebLogger.WebLogger
+- uid: Shirhatti.WebLogger.WebLogger.BeginScope*
+  name: BeginScope
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_BeginScope_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.BeginScope
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.BeginScope
+  nameWithType: WebLogger.BeginScope
+- uid: Shirhatti.WebLogger.WebLogger.BeginScope``1(``0)
+  name: BeginScope<TState>(TState)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_BeginScope__1___0_
+  commentId: M:Shirhatti.WebLogger.WebLogger.BeginScope``1(``0)
+  name.vb: BeginScope(Of TState)(TState)
+  fullName: Shirhatti.WebLogger.WebLogger.BeginScope<TState>(TState)
+  fullName.vb: Shirhatti.WebLogger.WebLogger.BeginScope(Of TState)(TState)
+  nameWithType: WebLogger.BeginScope<TState>(TState)
+  nameWithType.vb: WebLogger.BeginScope(Of TState)(TState)
+- uid: Shirhatti.WebLogger.WebLogger.Filter
+  name: Filter
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Filter
+  commentId: P:Shirhatti.WebLogger.WebLogger.Filter
+  fullName: Shirhatti.WebLogger.WebLogger.Filter
+  nameWithType: WebLogger.Filter
+- uid: Shirhatti.WebLogger.WebLogger.Filter*
+  name: Filter
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Filter_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.Filter
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.Filter
+  nameWithType: WebLogger.Filter
+- uid: Shirhatti.WebLogger.WebLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  name: IsEnabled(LogLevel)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_
+  commentId: M:Shirhatti.WebLogger.WebLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  fullName: Shirhatti.WebLogger.WebLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  nameWithType: WebLogger.IsEnabled(LogLevel)
+- uid: Shirhatti.WebLogger.WebLogger.IsEnabled*
+  name: IsEnabled
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_IsEnabled_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.IsEnabled
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.IsEnabled
+  nameWithType: WebLogger.IsEnabled
+- uid: Shirhatti.WebLogger.WebLogger.Log*
+  name: Log
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Log_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.Log
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.Log
+  nameWithType: WebLogger.Log
+- uid: Shirhatti.WebLogger.WebLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Log__1_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__
+  commentId: M:Shirhatti.WebLogger.WebLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  fullName: Shirhatti.WebLogger.WebLogger.Log<TState>(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func<TState, System.Exception, System.String>)
+  fullName.vb: Shirhatti.WebLogger.WebLogger.Log(Of TState)(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func(Of TState, System.Exception, System.String))
+  nameWithType: WebLogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, String>)
+  nameWithType.vb: WebLogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+- uid: Shirhatti.WebLogger.WebLogger.Name
+  name: Name
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Name
+  commentId: P:Shirhatti.WebLogger.WebLogger.Name
+  fullName: Shirhatti.WebLogger.WebLogger.Name
+  nameWithType: WebLogger.Name
+- uid: Shirhatti.WebLogger.WebLogger.Name*
+  name: Name
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_Name_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.Name
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.Name
+  nameWithType: WebLogger.Name
+- uid: Shirhatti.WebLogger.WebLogger.WriteMessage(Microsoft.Extensions.Logging.LogLevel,System.String,System.Int32,System.String,System.Exception)
+  name: WriteMessage(LogLevel, String, Int32, String, Exception)
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_WriteMessage_Microsoft_Extensions_Logging_LogLevel_System_String_System_Int32_System_String_System_Exception_
+  commentId: M:Shirhatti.WebLogger.WebLogger.WriteMessage(Microsoft.Extensions.Logging.LogLevel,System.String,System.Int32,System.String,System.Exception)
+  fullName: Shirhatti.WebLogger.WebLogger.WriteMessage(Microsoft.Extensions.Logging.LogLevel, System.String, System.Int32, System.String, System.Exception)
+  nameWithType: WebLogger.WriteMessage(LogLevel, String, Int32, String, Exception)
+- uid: Shirhatti.WebLogger.WebLogger.WriteMessage*
+  name: WriteMessage
+  href: api/Shirhatti.WebLogger.WebLogger.html#Shirhatti_WebLogger_WebLogger_WriteMessage_
+  commentId: Overload:Shirhatti.WebLogger.WebLogger.WriteMessage
+  isSpec: "True"
+  fullName: Shirhatti.WebLogger.WebLogger.WriteMessage
+  nameWithType: WebLogger.WriteMessage
