@@ -1,4 +1,4 @@
-name: .NET Core
+name: .NET Core 
 
 on:
   pull_request:
@@ -27,5 +27,5 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Test
+    - name: Pack
       run: dotnet pack
