@@ -7,13 +7,13 @@ ILogger implementation that returns streaming logs via an HTTP endpoint
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Shirhatti.WebLogger" Version="0.0.1" />
+    <PackageReference Include="Shirhatti.WebLogger" Version="0.0.2" />
   </ItemGroup>
 ```
   or
 
 ```sh
-dotnet add package Shirhatti.WebLogger --version 0.0.1
+dotnet add package Shirhatti.WebLogger --version 0.0.2
 ```
 
 2. Update `Program.cs`
