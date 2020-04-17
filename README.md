@@ -3,17 +3,17 @@ ILogger implementation that returns streaming logs via an HTTP endpoint
 
 ## Usage
 
-1. Add package reference
+1. Add package reference ![version](https://img.shields.io/nuget/v/Shirhatti.WebLogger)
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Shirhatti.WebLogger" Version="0.0.2" />
+    <PackageReference Include="Shirhatti.WebLogger" Version="x" />
   </ItemGroup>
 ```
   or
 
 ```sh
-dotnet add package Shirhatti.WebLogger --version 0.0.2
+dotnet add package Shirhatti.WebLogger
 ```
 
 2. Update `Program.cs`
