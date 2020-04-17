@@ -1,0 +1,24 @@
+<Project>
+
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <Deterministic>true</Deterministic>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Determinstic>true</Determinstic>
+
+    <PackageOutputPath>$(MSBuildThisFileDirectory)/artifacts/</PackageOutputPath>
+    <License>https://github.com/shirhatti/Shirhatti.WebLogger/blob/master/LICENSE</License>
+    <PackageProjectUrl>https://github.com/shirhatti/Shirhatti.WebLogger</PackageProjectUrl>
+    <Authors>Sourabh Shirhatti</Authors>
+ </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="GitVersionTask" Version="5.2.4" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers" />
+  </ItemGroup>
+
+</Project>

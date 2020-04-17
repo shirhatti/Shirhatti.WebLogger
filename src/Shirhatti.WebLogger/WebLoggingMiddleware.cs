@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Net.Http.Headers;
 using Shirhatti.WebLogger;
 using System;
 using System.Text;
@@ -31,8 +33,20 @@ namespace Microsoft.AspNetCore.Builder
                 _tcs.TrySetCanceled();
             });
 
-            context.Response.Headers.Add("Content-Type", "text/event-stream");
+            context.Response.ContentType = "text/event-stream";
+            context.Response.Headers[HeaderNames.CacheControl] = "no-cache";
+
+            // Make sure we disable all response buffering for SSE
+            var bufferingFeature = context.Features.Get<IHttpResponseBodyFeature>();
+            bufferingFeature.DisableBuffering();
+
+            context.Response.Headers[HeaderNames.ContentEncoding] = "identity";
+
+            // Workaround for a Firefox bug where EventSource won't fire the open event
+            // until it receives some data
+            await context.Response.WriteAsync("\r\n");
             await context.Response.Body.FlushAsync();
+
             Subscribe(processor);
             try
             {
