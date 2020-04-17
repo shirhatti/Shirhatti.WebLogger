@@ -1,4 +1,5 @@
 # Shirhatti.WebLogger
+
 ILogger implementation that returns streaming logs via an HTTP endpoint
 
 ![weblogger](https://user-images.githubusercontent.com/4734691/79593211-bcddda00-80a0-11ea-8885-0f747cdf4b02.gif)
@@ -64,3 +65,7 @@ dotnet add package Shirhatti.WebLogger
 5. Run your application- `dotnet run`
 
 6. Navigate to `https://localhost:5001/debug/logs` to view your streaming logs
+
+## Docs
+
+**Incomplete** docs at https://shirhatti.com/Shirhatti.WebLogger/ 
