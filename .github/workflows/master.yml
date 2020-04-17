@@ -3,6 +3,10 @@ name: .NET Core
 on:
   push:
     branches: [ master ]
+
+env:
+    MSBUILDSINGLELOADCONTEXT: 1
+
 jobs:
   build:
 
@@ -19,7 +23,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack
+      run: dotnet pack --no-build
     - name: Push Package
       run: dotnet nuget push artifacts/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
     - name: Push Symbols Package
