@@ -3,28 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <IsPackable>true</IsPackable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    
-    <VersionPrefix>0.0.2</VersionPrefix>
-    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts\</PackageOutputPath>
-    
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <Determinstic>true</Determinstic>
-
     <PackageId>Shirhatti.WebLogger</PackageId>
-    <Version>0.0.1</Version>
-    <Authors>Sourabh Shirhatti</Authors>
-
-    <License>https://github.com/shirhatti/Shirhatti.WebLogger/blob/master/LICENSE</License>
-    <PackageProjectUrl>https://github.com/shirhatti/Shirhatti.WebLogger</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
   </ItemGroup>
 
 </Project>
