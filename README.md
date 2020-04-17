@@ -1,6 +1,8 @@
 # Shirhatti.WebLogger
 ILogger implementation that returns streaming logs via an HTTP endpoint
 
+![weblogger](https://user-images.githubusercontent.com/4734691/79593211-bcddda00-80a0-11ea-8885-0f747cdf4b02.gif)
+
 ## Usage
 
 1. Add package reference ![version](https://img.shields.io/nuget/v/Shirhatti.WebLogger)
