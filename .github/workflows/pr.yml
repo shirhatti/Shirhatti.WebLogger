@@ -30,4 +30,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack --no-build
+      run: dotnet pack --no-build --configuration Release
