@@ -3,35 +3,36 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Net.Http.Headers;
 using Shirhatti.WebLogger;
 using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Microsoft.AspNetCore.Builder
 {
     internal class WebLoggingMiddleware : IObserver<LogMessageEntry>
     {
+        private const int _maxQueuedMessages = 10;
         private IDisposable _unsubscriber;
-        private TaskCompletionSource<bool> _tcs;
-        private HttpContext _context;
-        private volatile bool _isCancelled;
+        private readonly Channel<LogMessageEntry> _channel = Channel.CreateBounded<LogMessageEntry>(_maxQueuedMessages);
 
-        public WebLoggingMiddleware(RequestDelegate _)
+        private async IAsyncEnumerable<LogMessageEntry> FetchLogs([EnumeratorCancellation] CancellationToken token)
         {
+            while (await _channel.Reader.WaitToReadAsync(token))
+            {
+                var logMessage = await _channel.Reader.ReadAsync();
+                yield return logMessage;
+            }
+        }
 
+        public WebLoggingMiddleware(RequestDelegate next)
+        {
         }
         public async Task Invoke(HttpContext context, WebLoggerProcessor processor)
         {
-            _isCancelled = false;
-            _tcs = new TaskCompletionSource<bool>();
-            _context = context;
-
-            CancellationToken? token = context?.RequestAborted;
-            token.Value.Register(() =>
-            {
-                _isCancelled = true;
-                _tcs.TrySetCanceled();
-            });
+            var token = context?.RequestAborted ?? default;
 
             context.Response.ContentType = "text/event-stream";
             context.Response.Headers[HeaderNames.CacheControl] = "no-cache";
@@ -48,17 +49,20 @@ namespace Microsoft.AspNetCore.Builder
             await context.Response.Body.FlushAsync();
 
             Subscribe(processor);
-            try
-            {
-                await _tcs.Task;
-            }
-            catch (OperationCanceledException)
-            {
 
-            }
-            finally
+            await foreach (var message in FetchLogs(token))
             {
-                Unsubscribe();
+                if (message.TimeStamp != null)
+                {
+                    await context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.TimeStamp), token);
+                }
+
+                if (message.LevelString != null)
+                {
+                    await context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.LevelString), token);
+                }
+
+                await context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.Message), token);
             }
         }
 
@@ -74,32 +78,17 @@ namespace Microsoft.AspNetCore.Builder
 
         public void OnCompleted()
         {
-            _isCancelled = true;
-            _tcs.TrySetResult(true);
+            _ = _channel.Writer.TryComplete();
         }
 
         public void OnError(Exception error)
         {
-            // Do nothing.
+            _ = _channel.Writer.TryComplete();
         }
 
-        public async void OnNext(LogMessageEntry message)
+        public void OnNext(LogMessageEntry message)
         {
-            if (_isCancelled || _context==null)
-            {
-                return;
-            }
-            if (message.TimeStamp != null)
-            {
-                await _context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.TimeStamp));
-            }
-
-            if (message.LevelString != null)
-            {
-                await _context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.LevelString));
-            }
-
-            await _context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.Message));
+            _= _channel.Writer.TryWrite(message);
         }
     }
 }
