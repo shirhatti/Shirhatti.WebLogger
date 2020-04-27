@@ -12,21 +12,8 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AspNetCore.Builder
 {
-    internal class WebLoggingMiddleware : IObserver<LogMessageEntry>
+    internal class WebLoggingMiddleware
     {
-        private const int _maxQueuedMessages = 10;
-        private IDisposable _unsubscriber;
-        private readonly Channel<LogMessageEntry> _channel = Channel.CreateBounded<LogMessageEntry>(_maxQueuedMessages);
-
-        private async IAsyncEnumerable<LogMessageEntry> FetchLogs([EnumeratorCancellation] CancellationToken token)
-        {
-            while (await _channel.Reader.WaitToReadAsync(token))
-            {
-                var logMessage = await _channel.Reader.ReadAsync();
-                yield return logMessage;
-            }
-        }
-
         public WebLoggingMiddleware(RequestDelegate next)
         {
         }
@@ -48,9 +35,9 @@ namespace Microsoft.AspNetCore.Builder
             await context.Response.WriteAsync("\r\n");
             await context.Response.Body.FlushAsync();
 
-            Subscribe(processor);
+            using var receiver = new WebLoggerReceiver(processor);
 
-            await foreach (var message in FetchLogs(token))
+            await foreach (var message in receiver.FetchLogs(token))
             {
                 if (message.TimeStamp != null)
                 {
@@ -64,31 +51,6 @@ namespace Microsoft.AspNetCore.Builder
 
                 await context.Response.Body.WriteAsync(Encoding.ASCII.GetBytes(message.Message), token);
             }
-        }
-
-        public virtual void Subscribe(IObservable<LogMessageEntry> provider)
-        {
-            _unsubscriber = provider.Subscribe(this);
-        }
-
-        public virtual void Unsubscribe()
-        {
-            _unsubscriber?.Dispose();
-        }
-
-        public void OnCompleted()
-        {
-            _ = _channel.Writer.TryComplete();
-        }
-
-        public void OnError(Exception error)
-        {
-            _ = _channel.Writer.TryComplete();
-        }
-
-        public void OnNext(LogMessageEntry message)
-        {
-            _= _channel.Writer.TryWrite(message);
         }
     }
 }
