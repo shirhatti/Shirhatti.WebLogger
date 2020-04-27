@@ -5,5 +5,6 @@
         public string TimeStamp;
         public string LevelString;
         public string Message;
+        ;
     }
 }
